@@ -1,8 +1,4 @@
 FROM ubuntu:20.04
-#FROM python:3.9
-
-#RUN mkdir /app
-#WORKDIR /app
 
 RUN apt-get update && \
     apt-get upgrade -y && \
@@ -28,6 +24,5 @@ RUN chmod +rx /code/iss_tracker.py
 
 ENV PATH="/code:$PATH"
 
-#ENTRYPOINT ["python"]
 CMD ["iss_tracker.py"]
 
