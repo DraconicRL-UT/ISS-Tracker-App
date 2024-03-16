@@ -1,5 +1,8 @@
 FROM ubuntu:20.04
 
+RUN mkdir /app
+WORKDIR /app
+
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y python3 \
@@ -15,14 +18,14 @@ RUN pip install --user xmltodict
 RUN pip install --user astropy
 RUN pip install --user geopy
 
-COPY iss_tracker.py /code/iss_tracker.py
+COPY iss_tracker.py /app/iss_tracker.py
 
-COPY test_iss_tracker.py /code/test_iss_tracker.py
+COPY /test/test_iss_tracker.py /app/test_iss_tracker.py
 
-RUN chmod +rx /code/test_iss_tracker.py
-RUN chmod +rx /code/iss_tracker.py
+RUN chmod +rx /app/test_iss_tracker.py
+RUN chmod +rx /app/iss_tracker.py
 
-ENV PATH="/code:$PATH"
+ENV PATH="/app:$PATH"
 
 CMD ["iss_tracker.py"]
 

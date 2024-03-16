@@ -277,8 +277,8 @@ def now():
         location = geolocator.reverse((lat, lon), zoom = 10, language='en')
         sat_speed = speed(curr_StateVect)
         if (location == None):
-            return f'The ISS is currently above a body of water, and it\'s coordinates are: {lat}, {lon}. It is also at an altitude of: {alt} km above the Earth\'s surface. It is travling at a speed of about ~ {int(sat_speed)} km/s as of right now.\n'
-        return f'The ISS is currently above {str(location.address)}, and it\'s coordinates are: {str(location.latitude)}, {str(location.longitude)}. It is also at an altitude of {str(alt)} km above the Earth\'s surface. It is travling at a speed of about ~ {int(sat_speed)} km/s as of right now.\n'
+            return f'The ISS is currently above a body of water, and it\'s coordinates are: {lat}, {lon}. It is also at an altitude of: {alt} km above the Earth\'s surface. It is traveling at a speed of about ~ {int(sat_speed)} km/s as of right now.\n'
+        return f'The ISS is currently above {str(location.address)}, and it\'s coordinates are: {str(location.latitude)}, {str(location.longitude)}. It is also at an altitude of {str(alt)} km above the Earth\'s surface. It is traveling at a speed of about ~ {int(sat_speed)} km/s as of right now.\n'
     except ValueError:
         raise ValueError('null value in location route\n')
         logging.warning(f'encountered null value for epoch of {curr_StateVect["EPOCH"]} in location route.\n')
