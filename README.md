@@ -101,12 +101,12 @@ curl localhost:5000/
 This home page will print out some simply summary statistics about the ISS's current 15 day period. To access the list for the ISS statevector and epoch at each timestep (every 4 minutes across a 15 day period)
 use:
 ```
-curl localhost:5000/epochs"
+curl localhost:5000/epochs
 ```
 To alternatively, pull up the statevector for a specific time step, 
 adjust the route to be:
 ``` 
-curl localhost:5000/epochs/(specific epoch)
+curl localhost:5000/epochs/<specific_epoch>
 ```
 For example, if we wanted to look at the state vector of the intial 
 time (if it was 2024-050T14:25:00.000Z or 2024 Feb 19th 2:45:00pm UTC)
