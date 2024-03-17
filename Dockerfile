@@ -20,7 +20,7 @@ RUN pip install --user geopy
 
 COPY iss_tracker.py /app/iss_tracker.py
 
-COPY /test/test_iss_tracker.py /app/test_iss_tracker.py
+COPY test_iss_tracker.py /app/test_iss_tracker.py
 
 RUN chmod +rx /app/test_iss_tracker.py
 RUN chmod +rx /app/iss_tracker.py
