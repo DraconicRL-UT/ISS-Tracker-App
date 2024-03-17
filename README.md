@@ -151,6 +151,17 @@ the command line:
 ```
 curl 'localhost:5000/epochs/2024-050T14:25:00.000Z/speed'
 ```
+To view the location (including the latitude, longitude, altitude, and the
+geoposition of the ISS at a particular epoch, say an epoch of the same time
+as before (2024-050T14:25:00.000Z), use:
+```
+curl 'localhost:5000/epochs/2024-050T14:25:00.000Z/location'
+```
+Conversely, to access the last time step (in other words the current
+time as of right "now"), use:
+```
+curl localhost:5000/now
+```
 
 ## Citations & References
 1. [COE 332 Course Readthedocs website](https://coe-332-sp24.readthedocs.io/en/latest/homework/midterm.html)
