@@ -146,7 +146,7 @@ curl 'localhost:5000/epochs/2024-050T14:25:00.000Z/speed'
 3. [Download ISS statevector data](https://nasa-public-data.s3.amazonaws.com/iss-coords/current/ISS_OEM/ISS.OEM_J2K_EPH.xml)
 4. [Astropy documentation on Earth Location object](https://docs.astropy.org/en/stable/api/astropy.coordinates.EarthLocation.html)
 5. [Reference Implementation of astropy](https://stackoverflow.com/questions/78097446/how-do-i-use-astropy-to-transform-coordinates-from-j2000-to-lat-lon-and-altitu)
-6. [Geopy documentation](https://geopy.readthedocs.io/en/stable/#installation]
+6. [Geopy documentation](https://geopy.readthedocs.io/en/stable/#installation)
 
 
 
