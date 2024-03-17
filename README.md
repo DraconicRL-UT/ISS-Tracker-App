@@ -98,7 +98,19 @@ For the iss_tracker.py file, when running the application, the
 ```
 curl localhost:5000/
 ```
-This home page will print out some simply summary statistics about the ISS's current 15 day period. To access the list for the ISS statevector and epoch at each timestep (every 4 minutes across a 15 day period)
+This home page will print out some simply summary statistics about the ISS's current 15 day period. To view the comments about the ISS data use:
+```
+curl localhost:5000/comment
+```
+To view the headers about the ISS data use:
+```
+curl localhost:5000/header
+```
+To view the metadata of the ISS use:
+```
+curl localhost:5000/metadata
+```
+To access the list for the ISS statevector and epoch at each timestep (every 4 minutes across a 15 day period)
 use:
 ```
 curl localhost:5000/epochs
