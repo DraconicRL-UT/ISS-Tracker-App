@@ -1,6 +1,6 @@
-#The ISS Tracker Flask
+# The ISS Tracker Flask
 
-##Software Diagram
+## Software Diagram
 Here is a software diagram to describe the software hierarchy and interconnections. See below:
 [Software Diagram](diagram.png)
 
@@ -14,7 +14,7 @@ diagram. Included in the container is a test_iss_tracker.py
 exectutable that tests the internal functions of the iss_tracker
 executable (including the routes).
 
-##Directory Overview
+## Directory Overview
 > ISS-Tracker-App/
 > - Dockerfile
 > - docker-compose.yml
@@ -39,8 +39,8 @@ gives users routes to call functions that access data or data subsets of interes
 and functions used in the iss_tracker.py python script.
 6. diagram.png: The software diagram for this project.
 
-##Instructions For Container Creation With Docker
-###Bulding Container
+## Instructions For Container Creation With Docker
+### Bulding Container
 To build the container image from a Dockerfile, ensure docker is 
 installed on location newtwork (if on a server) or laptop, and that
 the current directory has the Dockerfile along with the dependent 
@@ -61,7 +61,7 @@ pulled from the official ISS website: [here](https://spotthestation.nasa.gov/tra
 this inside the code, so there is no need to store a local copy on the
 local computer or wget a copy. 
 
-###Running The Container App (using Dockerfile)
+### Running The Container App (using Dockerfile)
 To run the image, simply call the docker run command on command line
 like so: 
 ```
@@ -81,7 +81,7 @@ it with a "-d" (for background run) tag instead. Like so:
 docker run --rm -d username/image_name:image_version
 ```
 
-###Alternative Method of Running Container (using docker-compose)
+### Alternative Method of Running Container (using docker-compose)
 To use the docker-compose.yml file to automate the building and 
 running of the containerized code, use this command in command line:
 ```
@@ -92,7 +92,7 @@ but if it is undesired the "-d" tag can be ommitted and the app will
 need to have 2 active instances running (one to run the server, and 
 another to curl the routes for the desired outputs). 
 
-##Details On Usage Of The Container
+## Details On Usage Of The Container
 For the iss_tracker.py file, when running the application, the 
 "home"-page can be accessed with:
 ```
@@ -139,4 +139,14 @@ the command line:
 ```
 curl 'localhost:5000/epochs/2024-050T14:25:00.000Z/speed'
 ```
+
+## Citations & References
+1. [COE 332 Course Readthedocs website](https://coe-332-sp24.readthedocs.io/en/latest/homework/midterm.html)
+2. [ISS data (explanation of data)](https://spotthestation.nasa.gov/trajectory_data.cfm)
+3. [Download ISS statevector data](https://nasa-public-data.s3.amazonaws.com/iss-coords/current/ISS_OEM/ISS.OEM_J2K_EPH.xml)
+4. [Astropy documentation on Earth Location object](https://docs.astropy.org/en/stable/api/astropy.coordinates.EarthLocation.html)
+5. [Reference Implementation of astropy](https://stackoverflow.com/questions/78097446/how-do-i-use-astropy-to-transform-coordinates-from-j2000-to-lat-lon-and-altitu)
+6. [Geopy documentation](https://geopy.readthedocs.io/en/stable/#installation]
+
+
 
